@@ -233,9 +233,10 @@ function love.draw()
 
     --coloca uma cor de fundo
     love.graphics.clear(64 / 255, 64 / 255, 64 / 255, 255 / 255)
-
     --desenha algo na tela e coloca a fonte personalizada
     love.graphics.setFont(smallFont)
+
+    --mostra resultado
 
     if gameState == "start" then
         love.graphics.printf("WELCOME TO PONG!!!", 0, 10, VIRTUAL_WIDTH, "center")
@@ -259,6 +260,9 @@ function love.draw()
 
     --desenha a bola no meio da tela
     ball:render()
+
+    --mostra resultado
+    displayScore()
 
     --mostra o FPS
     FPS()
